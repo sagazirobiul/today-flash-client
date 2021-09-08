@@ -8,7 +8,7 @@ import './NavBar.css'
 
 const NavBar = () => {
     const { user, setUser, admin, setAdmin} = useContext(UserContext)
-    const email = localStorage?.getItem('email');
+    const email = localStorage.getItem('email');
 
     const signOut = () => {
         const loading = toast.loading('Please wait...');
