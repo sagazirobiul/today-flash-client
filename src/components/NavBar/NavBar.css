@@ -1,0 +1,24 @@
+.navBar {
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    background: #fff;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 0.98rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-item a:hover {
+    color: rgb(146, 146, 146);
+}
+
+.activePage {
+    color: #0D6EFD!important;
+}

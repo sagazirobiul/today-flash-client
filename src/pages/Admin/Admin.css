@@ -1,0 +1,85 @@
+.admin {
+    background-color: aliceblue;
+}
+
+.adminMenuBar {
+    height: 100vh;
+    background: #3067dd;
+    padding: 0!important;
+    position: sticky!important;
+    top: 0
+}
+.adminMenu a {
+    display: block!important;
+    color: white!important;
+    text-align: center;
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+.adminMenu a:hover {
+    text-decoration: none;
+    background-color: #4678ffc7!important;
+}
+.adminRow {
+    height: 100vh;
+}
+.adminMenuBar h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    background: white;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+.adminMenuBar h2 a{
+    color: black;
+    text-decoration: none;
+}
+.adminMenuBar h2 a:hover {
+    text-decoration: none;
+}
+.adminHighlight{
+    color: white;
+    margin-right: 0.5rem;
+}
+
+.newsAdd {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 4%);
+}
+
+.makeAdmin {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 3rem 2rem 8rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 4%);
+}
+
+.mainBtn {
+    background: #4275F8;
+    padding: 13px 36px;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.mainBtn:hover {
+    background: #3362da;
+}
+
+.adminBtn {
+    margin-top: 1.8rem;
+    margin-left: -0.7rem;
+}

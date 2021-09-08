@@ -1,0 +1,55 @@
+.fromContainer {
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    border-radius: 0.8rem;
+    margin-top: 2rem;
+    padding: 1.3rem 1.1rem 1.5rem;
+}
+
+.formTitle {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.userIdentity {
+    font-size: 0.92882rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+.userIdentity button {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #297BE5;
+    font-weight: 600;
+    padding: 0;
+}
+
+.googleBtn {
+    color: #fff;
+    width: 100%;
+    border-radius: 0.3rem;
+    padding: 0.3rem 0;
+    outline: none;
+    border: none;
+    margin: 0.2rem 0;
+    background: #E74C3C;
+    transition: 0.3s;
+}
+.googleBtn:hover {
+    background: #cf4536;
+}
+
+.or {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.or::before,
+.or::after {
+    display: inline-block;
+    content: "";
+    border-top: 0.1rem solid black;
+    min-width: 30%;
+    margin: 0 1rem;
+}

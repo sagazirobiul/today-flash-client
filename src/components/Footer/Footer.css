@@ -1,0 +1,17 @@
+.footer {
+    color: #fff;
+    background-color: black;
+    padding-top: 4rem;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.copyRight {
+    background-color:rgb(19, 18, 18);
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0.7rem;
+    margin-top: 3rem!important;
+}

@@ -1,0 +1,11 @@
+.content {
+    padding: 5rem 0;
+}
+
+.category {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem 0.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
