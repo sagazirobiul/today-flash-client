@@ -42,7 +42,7 @@ const NavBar = () => {
                             }
                             <Nav.Item>
                                 {
-                                    user.email || email ? 
+                                    user || email ? 
                                     <Button onClick={signOut} variant="danger">LogOut</Button>:
                                     <NavLink activeClassName="activePage" to="/login">Login</NavLink>
                                 }
