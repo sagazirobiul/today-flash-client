@@ -16,7 +16,7 @@ const NewsAddForm = () => {
             img: imgURL
         }
 
-        axios.post('http://localhost:5050/addNews', newsInfo)
+        axios.post('https://today-flash.herokuapp.com/addNews', newsInfo)
         .then(res => {
             toast.dismiss(loading)
             toast.success('News added successfully')

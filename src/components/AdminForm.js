@@ -10,7 +10,7 @@ const AdminForm = () => {
 
     const onSubmit = data => {
         const loading = toast.loading('Please wait...')
-        axios.post('http://localhost:5050/addAdmin',{email: data.email})
+        axios.post('https://today-flash.herokuapp.com/addAdmin',{email: data.email})
         .then(res => {
             toast.dismiss(loading)
             toast.success('One admin added successfully')

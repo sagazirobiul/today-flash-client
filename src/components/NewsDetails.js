@@ -9,7 +9,7 @@ const NewsDetails = () => {
     const {name, description, category, img, author} = news || {}
 
     useEffect(() => {
-        axios.get(`http://localhost:5050/newsDetails?id=${id}`)
+        axios.get(`https://today-flash.herokuapp.com/newsDetails?id=${id}`)
         .then(res => setNews(res.data[0]))
     },[id])
 

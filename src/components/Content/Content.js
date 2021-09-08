@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Tab, Row, Col, Nav} from 'react-bootstrap'
+import { Tab, Row, Col, Nav, Spinner} from 'react-bootstrap'
 import NewsCart from '../NewsCart/NewsCart';
 import axios from 'axios';
 import './Content.css'
@@ -13,7 +13,7 @@ const Content = () => {
     const [newses, setNewses] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:5050/getNews?category=${category.category}`)
+        axios.get(`https://today-flash.herokuapp.com/getNews?category=${category.category}`)
         .then(res => setNewses(res.data))
     },[category.category])
 
@@ -50,7 +50,7 @@ const Content = () => {
                             {
                                 topNews.map(({description, img}, index) => {
                                     return(
-                                        <div className="topNewsBox d-flex align-items-center">
+                                        <div className="topNewsBox d-flex align-items-center" key={index}>
                                             <div className="top-img">
                                                 <img src={`${img}`} alt="" />
                                             </div>
@@ -66,7 +66,11 @@ const Content = () => {
                             <Tab.Pane eventKey={category.id}>
                                 <Row>
                                     {
-                                    newses?.map((news, index) => <NewsCart news={news} key={index}/>)
+                                    newses.length === 0 ?
+                                        <div className="text-center">
+                                            <Spinner animation="border" />
+                                        </div>:
+                                        newses.map((news, index) => <NewsCart news={news} key={index}/>)
                                     }
                                 </Row>
                             </Tab.Pane>

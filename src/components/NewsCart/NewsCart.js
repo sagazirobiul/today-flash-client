@@ -7,7 +7,7 @@ const NewsCart = ({news:{name, description, img, author, _id}}) => {
     let shortDes = description.substring(0, 130)
 
     return (
-        <Col md={6} className="my-2">
+        <Col lg={6} className="my-2">
             <div className="newsCat">
                 <h4 className="text-center">{name}</h4>
                 <div className="img-box text-center mb-1">

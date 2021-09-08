@@ -18,7 +18,7 @@ function App() {
   const [admin, setAdmin] = useState(false);
   
   useEffect(() => {
-    axios.get(`http://localhost:5050/checkAdmin?email=${user}`)
+    axios.get(`https://today-flash.herokuapp.com/checkAdmin?email=${user}`)
     .then(res => {
         if(res.data.length > 0){
             setAdmin(true)
