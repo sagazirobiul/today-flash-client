@@ -83,3 +83,9 @@
     margin-top: 1.8rem;
     margin-left: -0.7rem;
 }
+
+@media (max-width: 991.98px) {
+    .adminMenuBar {
+        height: auto;
+    }
+}
