@@ -15,7 +15,8 @@ const NavBar = () => {
         handleSignOut()
         .then(res => {
             toast.dismiss(loading);
-            setUser(res)
+            setUser('');
+            localStorage.clear();
             setAdmin(false)
             toast.error('Logged Out!');
         })
