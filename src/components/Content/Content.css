@@ -2,10 +2,42 @@
     padding: 5rem 0;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #000!important;
+}
+
 .category {
     background: #fff;
     border-radius: 1rem;
     padding: 1.5rem 0.5rem;
     margin-top: 2rem;
     box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.topNews {
+    text-align: center;
+    color: #fff;
+    background: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 2rem 0 3px 0;
+}
+
+.topNewsBox {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #999;
+    margin-bottom: 3px;
+}
+
+.topNewsBox .top-img img{
+    width: 100px;
+}
+
+.top-img {
+    margin-right: 0.8rem;
 }

@@ -7,7 +7,7 @@ import { handleSignOut } from '../../pages/login/logInManager';
 import './NavBar.css'
 
 const NavBar = () => {
-    const { user, setUser} = useContext(UserContext)
+    const { user, setUser, admin, setAdmin} = useContext(UserContext)
     const email = localStorage?.getItem('email');
 
     const signOut = () => {
@@ -16,6 +16,7 @@ const NavBar = () => {
         .then(res => {
             toast.dismiss(loading);
             setUser(res)
+            setAdmin(false)
             toast.error('Logged Out!');
         })
     }
@@ -32,11 +33,13 @@ const NavBar = () => {
                                 <NavLink exact activeClassName="activePage" to="/">Home</NavLink>
                             </Nav.Item>
                             <Nav.Item>
-                                <NavLink to="#topNews">Top News</NavLink>
+                                <Nav.Link href="#topNews">Top News</Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
+                            {
+                                admin === true && <Nav.Item>
                                 <NavLink to="/admin">Admin</NavLink>
                             </Nav.Item>
+                            }
                             <Nav.Item>
                                 {
                                     user.email || email ? 

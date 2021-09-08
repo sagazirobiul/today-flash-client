@@ -1,15 +1,15 @@
 import React from 'react';
 import './Header.css'
 import { Carousel } from 'react-bootstrap';
-import s1 from '../../images/s1.gif'
+import s1 from '../../images/s1.png'
 import s2 from '../../images/s2.gif'
-import s3 from '../../images/s3.gif'
+import s4 from '../../images/bb1.jpg'
 
 const Header = () => {
     const slideInfo = [
-        {img: s1},
+        {img: s4},
         {img: s2},
-        {img: s3}
+        {img: s1},
     ]
     return (
         <div>

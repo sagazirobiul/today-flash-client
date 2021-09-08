@@ -6,6 +6,8 @@
 
 .footer a {
     text-decoration: none;
+    color: #999;
+    list-style: none;
 }
 
 .copyRight {

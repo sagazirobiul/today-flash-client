@@ -3,6 +3,7 @@ import { Tab, Row, Col, Nav} from 'react-bootstrap'
 import NewsCart from '../NewsCart/NewsCart';
 import axios from 'axios';
 import './Content.css'
+import { topNews } from '../../data/topNewsData';
 
 const Content = () => {
     const [category, setCategory] = useState({
@@ -20,9 +21,9 @@ const Content = () => {
         <section className="content">
             <Tab.Container id="left-tabs-example" defaultActiveKey="1">
                 <Row className="col-md-10 mx-auto">
-                    <Col sm={3}>
+                    <Col md={4}>
                         <div className="category">
-                            <h5 className="text-center text-info">CATEGORY</h5>
+                            <h5 className="text-center fw-bold">CATEGORY</h5>
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
                                     <Nav.Link eventKey="1" onClick={() => setCategory({category:'Environment', id: '1'})}>Environment</Nav.Link>
@@ -44,8 +45,23 @@ const Content = () => {
                                 </Nav.Item>
                             </Nav>
                         </div>
+                        <div id="topNews">
+                            <h3 className="topNews">Top News</h3>
+                            {
+                                topNews.map(({description, img}, index) => {
+                                    return(
+                                        <div className="topNewsBox d-flex align-items-center">
+                                            <div className="top-img">
+                                                <img src={`${img}`} alt="" />
+                                            </div>
+                                            <p>{description}</p>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
                     </Col>
-                    <Col sm={9}>
+                    <Col md={8}>
                         <Tab.Content>
                             <Tab.Pane eventKey={category.id}>
                                 <Row>

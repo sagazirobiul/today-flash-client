@@ -16,8 +16,9 @@ export const loginWithProvider = provider => {
     const auth = getAuth();
     return signInWithPopup(auth, provider)
     .then( res => {
-        setToken(res.user.email);
-        return res.user.email;
+        const email = res.user.email;
+        setToken(email);
+        return email;
     }).catch( error  => {
         const message = {
           error: error.message
@@ -30,8 +31,8 @@ export const createAccount = (email, password) => {
     const auth = getAuth();
     return createUserWithEmailAndPassword(auth, email, password)
     .then( res => {
-      setToken();
-      return res.user.email;
+      setToken(email);
+      return email;
     })
     .catch( error  => {
       const message = {
@@ -45,8 +46,8 @@ export const loginWithEmail = (email, password) =>{
   const auth = getAuth();
   return signInWithEmailAndPassword(auth, email, password)
   .then( res => {
-    setToken();
-    return res.user.email;
+    setToken(email);
+    return email;
   })
   .catch( error => {
       const message = {

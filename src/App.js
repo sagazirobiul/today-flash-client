@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from './components/NavBar/NavBar';
@@ -8,27 +8,38 @@ import Admin from './pages/Admin/Admin';
 import Home from './pages/Home/Home';
 import Login from './pages/login/Login'
 import NewsDetails from './components/NewsDetails';
+import axios from 'axios';
 
 
 export const UserContext = createContext();
 function App() {
-  const [user, setUser] = useState('');
+  const email = localStorage.getItem('email')
+  const [user, setUser] = useState(email);
+  const [admin, setAdmin] = useState(false);
+  
+  useEffect(() => {
+    axios.get(`http://localhost:5050/checkAdmin?email=${user}`)
+    .then(res => {
+        if(res.data.length > 0){
+            setAdmin(true)
+        }
+    })
+  }, [user])
 
   return (
-    <UserContext.Provider value={{user, setUser}}>
+    <UserContext.Provider value={{user, setUser, admin, setAdmin}}>
       <Toaster/>
       <Router>
         <Switch>
-            {/* <PrivateRoute path="/admin">
-              <Admin/>
-            </PrivateRoute> */}
-            <Route path="/admin">
-              <Admin/>
-            </Route>
-            <Route path="/details/:id">
+            <PrivateRoute path="/details/:id">
+              <NavBar/>
               <NewsDetails/>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/admin">
+              <Admin/>
+            </PrivateRoute>
             <Route path="/login">
+              <NavBar/>
               <Login/>
             </Route>
             <Route path="/">

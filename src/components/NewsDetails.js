@@ -9,18 +9,21 @@ const NewsDetails = () => {
     const {name, description, category, img, author} = news || {}
 
     useEffect(() => {
-        axios.get(`http://localhost:5050/newsDetails/${id}`)
-        .then(res => console.log(res))
+        axios.get(`http://localhost:5050/newsDetails?id=${id}`)
+        .then(res => setNews(res.data[0]))
     },[id])
 
     return (
         <div className="container">
             <div className="col-md-10 mx-auto">
-                <h1>{name}</h1>
-                <img className="w-100" src={img} alt="" />
-                <span className="fw-bold my-1">Author: <span className="text-info">{author}</span></span>
-                <p>{description}</p>
+                <h1 className="detTitle">{name}</h1>
+                <div className="text-center">
+                    <img style={{height:'300px'}} src={img} alt="" />
+                </div>
+                <p className="fw-bold my-1">Author: <span className="text-info">{author}</span></p>
+                <p className="des">{description}</p>
             </div>
+            <p className="text-center fw-bold">. . .</p>
         </div>
     );
 };

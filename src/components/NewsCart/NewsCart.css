@@ -9,7 +9,18 @@
 }
 
 .newsCat {
-    border: 1px solid gray;
+    border: 1px solid rgb(212, 212, 212);
     padding: 0.7rem;
     border-radius: 0.2rem;
+}
+
+.des {
+    font-size: 1.4rem;
+}
+
+.detTitle {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin: 1rem 0;
 }
