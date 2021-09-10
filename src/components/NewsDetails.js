@@ -18,7 +18,7 @@ const NewsDetails = () => {
             <div className="col-md-10 mx-auto">
                 <h1 className="detTitle">{name}</h1>
                 <div className="text-center">
-                    <img style={{height:'300px'}} src={img} alt="" />
+                    <img style={{height:'300px', maxWidth: '100%'}} src={img} alt="" />
                 </div>
                 <p className="fw-bold my-1">Author: <span className="text-info">{author}</span></p>
                 <p className="des">{description}</p>

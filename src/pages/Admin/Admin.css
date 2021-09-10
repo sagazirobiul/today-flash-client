@@ -6,8 +6,6 @@
     height: 100vh;
     background: #3067dd;
     padding: 0!important;
-    position: sticky!important;
-    top: 0
 }
 .adminMenu a {
     display: block!important;
